@@ -7,6 +7,10 @@ TagManager:
   - Gun
   - Enemy
   - Bullet
+  - score_value
+  - game_over_layer
+  - reset_button
+  - score_layer_value
   layers:
   - Default
   - TransparentFX
@@ -43,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2501392759
     locked: 0

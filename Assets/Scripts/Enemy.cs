@@ -12,8 +12,8 @@ namespace Asteroids
         {
             if (other.CompareTag("Bullet"))
             {
-                GameController.instance.Score++;
                 Destroy(gameObject);
+                GameController.instance.SetPoint();
             }
         }
         

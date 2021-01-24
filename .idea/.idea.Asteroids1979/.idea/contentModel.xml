@@ -15,6 +15,7 @@
           <e p="Gun.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="Ship.cs" t="Include" />
+          <e p="UIController.cs" t="Include" />
         </e>
       </e>
       <e p="Asteroids1979.sln" t="IncludeFlat" />
