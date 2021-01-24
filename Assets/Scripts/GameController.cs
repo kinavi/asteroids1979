@@ -54,6 +54,7 @@ namespace Asteroids
                 {5, new Level(){Time = 50, DelaySpawn = 0.2f}}
             };
             _currentLevel = 1;
+            _uiController.Level = 1;
             _delaySpawn = _levelDictionary[_currentLevel].DelaySpawn;
         }
         
@@ -61,6 +62,7 @@ namespace Asteroids
         {
             if (!_isGameOver)
             {
+                _uiController.Time = (int)Time.time;
                 setLevelByTime();
                 DelayBeforeInvoke(SpawnEnemy);
             }
@@ -72,6 +74,7 @@ namespace Asteroids
             {
                 ++_currentLevel;
                 _delaySpawn = _levelDictionary[_currentLevel].DelaySpawn;
+                _uiController.Level = _currentLevel;
             }
         }
 
@@ -105,7 +108,7 @@ namespace Asteroids
             
             _enemies.Add(enemy);
         }
-        
+
         private void DelayBeforeInvoke(Action func)
         {
             _time += Time.deltaTime;
